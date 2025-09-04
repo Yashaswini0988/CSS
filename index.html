@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Module 5 — Final Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky header (position: sticky) -->
+  <header class="header">
+    <div class="container row between center-y">
+      <a class="logo" href="#">CSS<span>Lab</span></a>
+      <nav class="nav">
+        <ul class="row gap-sm">
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with background image + gradient overlay -->
+  <section class="hero" id="home">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <h1>Style the Web with CSS</h1>
+      <p class="lead">Selectors, box model, flexbox, grid, responsive design, and more.</p>
+      <a class="btn btn-primary" href="#features">Get Started</a>
+    </div>
+  </section>
+
+  <!-- About (box model, typography) -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About This Page</h2>
+      <p>This page demonstrates core CSS concepts. Resize your browser to see the layout adjust.</p>
+      <div class="grid two">
+        <article class="card">
+          <h3>Clean Typography</h3>
+          <p class="muted">Using Google Fonts and sane defaults.</p>
+        </article>
+        <article class="card">
+          <h3>Theme via Variables</h3>
+          <p class="muted">Colors & spacing set once in <code>:root</code>.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features (Flexbox) -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2>Core Features</h2>
+      <div class="cards row wrap gap">
+        <article class="card lift">
+          <h3>Selectors</h3>
+          <p>Type, class, ID, pseudo‑classes, and more.</p>
+        </article>
+        <article class="card lift">
+          <h3>Box Model</h3>
+          <p>Margin, padding, border, and box‑sizing.</p>
+        </article>
+        <article class="card lift">
+          <h3>Flexbox</h3>
+          <p>Direction, wrap, gap, alignment.</p>
+        </article>
+        <article class="card lift">
+          <h3>Grid</h3>
+          <p>Columns, rows, areas, alignment.</p>
+        </article>
+        <article class="card lift">
+          <h3>Responsive</h3>
+          <p>Media queries, rem units, mobile‑first.</p>
+        </article>
+        <article class="card lift">
+          <h3>Motion</h3>
+          <p>Transitions and a light touch of animation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery (Grid + background images) -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="grid three masonry">
+        <div class="tile" style="--img:url('https://picsum.photos/600/400?random=11')"></div>
+        <div class="tile tall" style="--img:url('https://picsum.photos/600/800?random=12')"></div>
+        <div class="tile" style="--img:url('https://picsum.photos/600/400?random=13')"></div>
+        <div class="tile wide" style="--img:url('https://picsum.photos/800/400?random=14')"></div>
+        <div class="tile" style="--img:url('https://picsum.photos/600/400?random=15')"></div>
+        <div class="tile" style="--img:url('https://picsum.photos/600/400?random=16')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact (positioning badge + form layout) -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="card parent">
+        <span class="badge">New</span>
+        <form class="grid form-grid">
+          <label>
+            <span>Name</span>
+            <input type="text" placeholder="Ada Lovelace" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" placeholder="you@example.com" required>
+          </label>
+          <label class="full">
+            <span>Message</span>
+            <textarea rows="4" placeholder="Hello!"></textarea>
+          </label>
+          <button class="btn btn-primary">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fixed Back-to-top button (position: fixed) -->
+  <a href="#home" class="to-top" aria-label="Back to top">▲</a>
+
+  <footer class="footer">© 2025 CSSLab — Built with pure CSS</footer>
+</body>
+</html>

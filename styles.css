@@ -1,0 +1,44 @@
+/* Basic styles for CSS Module 5 final project */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 16px; }
+body { margin: 0; font-family: 'Inter', sans-serif; line-height: 1.65; }
+
+:root {
+  --bg: #0f172a;
+  --surface: #0b1220;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --brand: #22d3ee;
+  --brand-2: #0ea5e9;
+  --radius: 12px;
+}
+
+.header { position: sticky; top: 0; background: rgba(15,23,42,.9); }
+.logo { color: var(--text); font-weight: 800; }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover { color: var(--text); }
+
+.hero { position: relative; min-height: 60vh; background: url('https://picsum.photos/1600/900?blur=2') center/cover no-repeat; color: white; text-align: center; display: grid; place-items: center; }
+.hero .overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(14,165,233,.5), rgba(34,211,238,.35)); }
+.hero .hero-content { position: relative; z-index: 1; }
+
+.card { background: var(--surface); color: var(--text); padding: 1rem; margin: 1rem 0; border-radius: var(--radius); }
+.lift:hover { transform: translateY(-4px); }
+
+.grid { display: grid; gap: 1rem; }
+.grid.two { grid-template-columns: repeat(2, 1fr); }
+.grid.three { grid-template-columns: repeat(3, 1fr); }
+
+.tile { height: 200px; background-image: var(--img); background-size: cover; background-position: center; border-radius: var(--radius); }
+.tile.wide { grid-column: span 2; }
+.tile.tall { height: 400px; }
+
+.form-grid { grid-template-columns: 1fr; gap: 1rem; }
+.form-grid label { display: grid; gap: .5rem; }
+.form-grid input, .form-grid textarea { padding: .75rem; border-radius: var(--radius); border: none; }
+
+.badge { position: absolute; top: -10px; right: -10px; background: var(--brand); padding: .25rem .6rem; border-radius: 999px; font-size: .75rem; }
+
+.to-top { position: fixed; bottom: 1rem; right: 1rem; background: #0b1220; color: var(--text); border-radius: 50%; padding: .5rem; text-decoration: none; }
+
+.footer { text-align: center; padding: 1rem; color: var(--muted); background: #0b1220; }
